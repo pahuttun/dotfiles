@@ -113,7 +113,7 @@ export PATH=$PATH
 
 ### Git completion
 
-source ~/.git-completion.bash
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 ### Git prompt
 
