@@ -1,0 +1,28 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	# name = // FIXME
+	# email = // FIXME
+[core]
+	editor = subl -n -w
+	# excludesfile = /Users/<DIR>/.gitignore_global // FIXME
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	sattus = status
+	stautus = status
+	statusu = status
+	st = status
+    ci = commit
+    co = checkout
+    br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    diff-branches = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+    plog = "log --decorate --stat --graph --pretty=format:'%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n'"
